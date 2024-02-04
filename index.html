@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0; /* Add padding to body to avoid abrupt jumps when the navbar becomes sticky */
+        }
+
+        #header {
+            text-align: center;
+        }
+
+        #logo {
+            width: 250px;
+            height: auto;
+        }
+
+        #menu-bar {
+            text-align: center;
+            background-color: aqua;
+        }
+
+        #menu-bar li {
+            display: inline-block;
+            padding: 15px 10px;
+            color: azure;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #container {
+            text-align: center;
+            padding: 50px 100px;
+        }
+
+        #about-img {
+            width: 100%;
+        }
+
+        /* Add styles for the sticky class */
+        .sticky {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: aqua; /* Match the background color of the navbar */
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWQLTb64NvN6w8SEpnV-xdQAG9OUrqDeFqpg&usqp=CAU" id="logo">
+    </div>
+    <nav id="menu-bar">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Our Team</li>
+        <li>Client</li>
+        <li>Contact Us</li>
+    </nav>
+    <div id="container">
+        <h1>About Us</h1>
+        <img id="about-img" src="https://akm-img-a-in.tosshub.com/indiatoday/images/photogallery/202110/amitabh-bachchan_a91300_IT_1633958703618.jpg?VersionId=JYRGurcXqZ2lPFjnVPrm1TQtTVSaq2j2&size=686:*" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis reiciendis nulla aut facere facilis repudiandae laudantium fugiat. Autem natus placeat enim quia recusandae suscipit rerum, officiis pariatur, nesciunt soluta temporibus repudiandae, corrupti aspernatur! Nam, unde cupiditate? Quasi quibusdam nostrum consequuntur earum error ullam sunt, dolorum, vel quis eos sit totam, veniam optio rerum delectus accusantium harum expedita debitis sequi beatae. Consequuntur, velit! Similique nesciunt deleniti reiciendis quisquam, voluptatum ab placeat repudiandae quod omnis ad molestiae pariatur veniam blanditiis in vitae nihil cumque veritatis dolore repellendus recusandae fugiat vel culpa explicabo. Assumenda praesentium consectetur quasi labore vitae earum ducimus sed veritatis soluta, nemo aliquam enim dignissimos neque eaque temporibus iusto quaerat! Molestiae, beatae sunt! Accusamus reiciendis neque ipsum aut laboriosam eos quos molestias. Provident odio rerum voluptates in vero. Cupiditate, laudantium, dolorem harum rem dolore culpa officia quia eaque commodi ab tempore quidem dolor at sint explicabo accusantium! Numquam adipisci, aut exercitationem, laboriosam officiis suscipit distinctio, officia alias porro doloribus dicta. Reiciendis aperiam voluptatibus autem fugit, molestiae maiores qui sequi architecto sunt deserunt incidunt voluptas quasi, beatae ratione nobis. Quisquam voluptate, dignissimos magnam itaque soluta corrupti officiis, odio maiores minus, aliquid quos? Adipisci aliquid impedit eligendi consequatur cupiditate, tempora, deleniti modi veritatis, numquam error atque reiciendis deserunt rerum dolorum enim minima. Corrupti dolore voluptates accusantium, vel eius quisquam ullam assumenda explicabo aliquid nisi provident deserunt animi quasi quos doloribus temporibus nam illo tenetur. Dignissimos ullam recusandae iusto harum ea in numquam quos dolore quia consequuntur temporibus sint eos blanditiis mollitia quaerat sit officia inventore tempora voluptatem pariatur fugit, minus veniam hic. Nemo eligendi non praesentium ipsam, quas aspernatur beatae ipsum provident dicta officiis vitae dolorem fugiat iusto consequatur excepturi iure necessitatibus consectetur doloremque voluptates nisi a animi quasi. Dicta vero quod voluptates tenetur, est illum placeat atque iste ab vitae nulla autem deserunt, tempore totam, molestias assumenda laboriosam? Dolore quam dolorum necessitatibus voluptas reiciendis similique aliquid nisi iste perferendis laudantium, quia, soluta totam. Magni, minus itaque modi aspernatur quo quaerat error nemo velit. Dicta aut distinctio consectetur non quam assumenda fugiat rem aliquam iste cumque laboriosam eos odio reiciendis odit, dignissimos esse tempore! Dolor, minima quae? Aspernatur molestias ad iusto. Minima voluptate soluta vero assumenda hic sunt error, harum quaerat esse, cum maxime reprehenderit obcaecati voluptatem maiores eligendi quam totam tenetur? Mollitia officiis, repellendus ipsa cupiditate rem at autem atque illum beatae facilis eveniet asperiores, laudantium maxime necessitatibus sed nam quidem? Dolorem, aut tenetur? Totam qui esse, fugiat voluptatibus beatae eius cumque, neque ipsum laboriosam animi at, inventore reprehenderit? Ex saepe sapiente dicta maxime cupiditate alias suscipit ratione consequuntur praesentium est nesciunt ullam, at voluptas aliquid quasi sit reprehenderit harum! Dolorum incidunt dolores totam eligendi nostrum porro aperiam saepe nisi officia, ratione voluptatibus qui neque numquam eum amet animi? Dolor itaque nulla, atque et vel, alias nobis sequi nemo necessitatibus, nesciunt debitis expedita eveniet quasi facilis repellat laborum dolorem error! Repellendus corrupti dolor labore sequi possimus distinctio voluptate sunt minus rerum, aliquid qui eos saepe odit reiciendis beatae suscipit corporis quasi!</p>
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            let navbar = document.getElementById("menu-bar");
+            let header = document.getElementById("header");
+            let offset = header.offsetHeight; // Get the height of the header
+
+            if (window.pageYOffset >= offset) {
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+</html>
