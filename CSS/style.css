@@ -1,0 +1,43 @@
+       body{
+            margin: 0;
+            padding: 0; /* Add padding to body to avoid abrupt jumps when the navbar becomes sticky */
+        }
+
+        #header {
+            text-align: center;
+        }
+
+        #logo {
+            width: 250px;
+            height: auto;
+        }
+
+        #menu-bar {
+            text-align: center;
+            background-color: aqua;
+        }
+
+        #menu-bar li {
+            display: inline-block;
+            padding: 15px 10px;
+            color: azure;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #container {
+            text-align: center;
+            padding: 50px 100px;
+        }
+
+        #about-img {
+            width: 100%;
+        }
+
+        /* Add styles for the sticky class */
+        .sticky {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: aqua; /* Match the background color of the navbar */
+        }
